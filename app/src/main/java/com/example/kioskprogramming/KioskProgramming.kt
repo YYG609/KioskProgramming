@@ -10,7 +10,8 @@ package com.example.kioskprogramming
 //      : 메뉴 선택시 카운트 후, 메인메뉴로 이동
 //      : 메인메뉴로 이동하는 뒤로가기 번호 정의
 
+
 fun main(){
-    val mainMenu = mainMenu()
+    val mainMenu = MainMenu()
     mainMenu.mainOrder()
 }

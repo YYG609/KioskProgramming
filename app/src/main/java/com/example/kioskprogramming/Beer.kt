@@ -1,26 +1,23 @@
 package com.example.kioskprogramming
 
-import java.lang.NumberFormatException
+class Beer {
 
-class beer {
     fun beerOrder() {
-        println(" ")
-        println("메뉴(번호)를 선택해주세요")
-        println(" ")
-        println("1. ShackMeister Ale    | W 9.8 | 쉐이크쉑 버거를 위해 뉴욕 브루클린 브루어리에서 특별히 양조한 에일 맥주")
-        println("2. Magpie Brewing Co.  | W 6.8 | ")
-        println("0. 뒤로가기              | 뒤로가기")
+        println("\n메뉴(번호)를 선택해주세요\n")
+        Menu("1. ShackMeister Ale","W 9.8","쉐이크쉑 버거를 위해 뉴욕 브루클린 브루어리에서 특별히 양조한 에일 맥주")
+        Menu("2. Magpie Brewing Co.","W 6.8"," ")
+        println("0. 뒤로가기")
 
         try {
             val beerChoose = readLine()!!.toInt()
-            val mainMenu = mainMenu()
+            val mainMenu = MainMenu()
             when (beerChoose) {
                 1 -> {
-                    println("[ 1. ShackMeister Ale    | W 9.8 | 를 주문하셨습니다 ]")
+                    Menu("1. ShackMeister Ale","W 9.8","주문")
                     return mainMenu.mainOrder()
                 }
                 2 -> {
-                    println("[ 2. Magpie Brewing Co.  | W 6.8 | 를 주문하셨습니다 ]")
+                    Menu("2. Magpie Brewing Co.","W 6.8","주문")
                     return mainMenu.mainOrder()
                 }
                 0 -> {
